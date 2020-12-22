@@ -63,7 +63,7 @@ Firefox:
 
 
 
-3) under cookies you will see https://instagram.com , click this and copy the cookie labeled session id
+3) under cookies you will see https://instagram.com , click this and copy the cookie labeled sessionid
 
 
 
