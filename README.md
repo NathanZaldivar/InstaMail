@@ -12,9 +12,7 @@ Instamail is an account parser for Instagram. This is done because users input t
 InstaMail requires the Requests module, this can be installed with:
 
 ```
-
 pip3 install requests
-
 ```
 
 InstaMail also needs a valid sessionid to work.
