@@ -62,22 +62,21 @@ for mail in emails_list:
             continue
 
     def email_cleanup(email):
-        x = email.replace('"full_name": "', '')
-        y = x.replace('", "', '')
-        if re.match(r'[^@]+@[^@]+\.[^@]+', y):
-            if re.findall(r'[ +\\]', y):
-                return False
-            else:
-                return y
-        else:
+        match = re.search(r'"full_name"\s*:\s*"([^"]+)"', email)
+        if not match:
             return False
+        candidate = match.group(1)
+        if re.match(r'[^@]+@[^@]+\.[^@]+', candidate) and not re.search(r'[ +\\]', candidate):
+            return candidate
+        return False
 
     def username_cleanup(user):
         if user == '':
             return False
-        x = user.replace('username": "', '')
-        y = x.replace('"', '')
-        return y
+        match = re.search(r'"username"\s*:\s*"([^"]+)"', user)
+        if match:
+            return match.group(1)
+        return False
 
     def cleanup(users, mails):
         for x, y in zip(users, mails):
