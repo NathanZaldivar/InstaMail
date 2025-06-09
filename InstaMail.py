@@ -3,7 +3,7 @@ import requests
 import re
 
 print('-' * 100)
-print('\nWelcome to ryes instagram acount parser!')
+print('\nWelcome to ryes instagram account parser!')
 print('''
 
 @@@@@@@   @@@ @@@  @@@@@@@@     @@@  @@@  @@@   @@@@@@   @@@@@@@   @@@  @@@   @@@@@@
